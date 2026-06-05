@@ -21,7 +21,7 @@ html {
 }
 body {
     min-height: 100vh;
-    min-width: 100dvw;
+    width: 100%;
   background-color: var(--background-color);
   color: var(--text-color); 
   display: grid;
