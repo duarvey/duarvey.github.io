@@ -164,14 +164,15 @@ main {
 
 .hero {
   display: flex;
-  flex-direction: row;
   height: 100vh;
-  padding: 0;
-  align-items: flex-start;
+  width: 98%;
+  margin: 0;
+  padding: min(4em, 8%);
+  box-sizing: border-box;
+  justify-content: center;
 }
 .identity {
   align-items: center;
-  padding: 4em;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -199,31 +200,48 @@ main {
   margin: 0;
 }
 
-.photo{
-  margin: 2em;
-  position: sticky;
+.photo-container{
+  border: solid red;
+  padding: min(1em, 5%);
+  align-items: center;
+  justify-items: center;
+  width: min (300px, 55%);
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 700px;
-  background-image: url(images/77969072_p0.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  justify-content: end;
-  align-items: center;
+}
+img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo{
+   width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
 }
 
 
+
+
 .greetings{
-width: 540px;
+width: auto;
 height: auto;
 margin: 1em;
 
-color: rgb(255, 255, 255);
+color: rgb(165, 165, 165);
 background-color: #000000;
-border-color: #7d8782;
+border: solid;
+border-color: #ffffff;
 border-radius: .4em;
-border-width: 30px;
+border-width: 9px;
 }
 
 .knight {
