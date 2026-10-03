@@ -1,33 +1,32 @@
-const toggleButton = document.getElementById('toggle-btn')
-const sidebar = document.getElementById('sidebar')
+const toggleButton = $('#toggle-btn');
+const sidebar = $('#sidebar');
 
-function toggleSidebar(){
-    sidebar.classList.toggle('close')
-    toggleButton.classList.toggle('rotate')  
+function toggleSidebar() {
+    sidebar.toggleClass('open');
+    toggleButton.toggleClass('rotate');
 
-    closeAllSubMenus()
+    closeAllSubMenus();
 }
-
-
-function toggleSubMenu(button){
-
-    if(!button.nextElementSibling.classList.contains('show')){
-        closeAllSubMenus()
+function toggleSubMenu(button) {
+    if (!$(button).next().hasClass('show')) {
+        closeAllSubMenus();
     }
-     
-    
 
-    button.nextElementSibling.classList.toggle('show')
-    button.classList.toggle('rotate')
+    $(button).next().toggleClass('show');
+    $(button).toggleClass('rotate');
 
-    if(sidebar.classList.contains('close')){
-        sidebar.classList.toggle('close')
-        toggleButton.classList.toggle('rotate')}
-
+    if (sidebar.hasClass('auto-hide') && !sidebar.hasClass('open')) {
+        sidebar.toggleClass('open');
+        toggleButton.toggleClass('rotate');
+    }
 }
 
-function closeAllSubMenus(){ 
-    Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-        ul.classList.remove('show')
-        ul.previousElementSibling.classList.remove('rotate')
-    })}
+function closeAllSubMenus() {
+    sidebar.find('.show').each(function() {
+        $(this).removeClass('show');
+        $(this).prev().removeClass('rotate');
+    });
+}
+setTimeout(function() {
+    sidebar.addClass('auto-hide');
+}, 1000);
