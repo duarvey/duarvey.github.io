@@ -134,6 +134,7 @@ body {
 }
 #sidebar a:hover, #sidebar .dropdown-btn:hover {
   background-color: var(--accent-color);
+  fill: var(--background-color);
 }
 .dropdown-btn {
 width: 100%;
@@ -218,22 +219,97 @@ main {
 
 .hero {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100%;
   margin: 0;
   gap: 10em;
   box-sizing: border-box;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("images/77969072_p0.jpg");
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("/images/whimsical\ journey\ of\ the\ spacemage.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
  
 }
+.coverphoto {
+  aspect-ratio: 4/6;
+  width: 400px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
 
+}
+.coverphoto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  gap: 1em;
+}
 
+.section1:hover {
+  background-color: rgba(0, 0, 0, 0.629); 
+   border-color: var(--accent-color);
+  opacity: 1;
+  transition: 200ms ease;
+}
 
+.title {
+
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+.paragraph {
+
+  width: 90%;
+  border: 2px solid var(--line-color);
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+  gap: 2em;
+  padding: 0;
+  border: 3px solid var(--line-color); 
+  width: 500px;
+  height: 600px;
+}
+
+.chapters {
+  padding: 1em;
+  font-size: 35px;
+}
+.chapterlist {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-size: 25px;
+  gap: 1em;
+}
 
 
 /*mobile format*/

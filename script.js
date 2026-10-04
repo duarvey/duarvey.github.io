@@ -30,3 +30,4 @@ function closeAllSubMenus() {
 setTimeout(function() {
     sidebar.addClass('auto-hide');
 }, 1000);
+
