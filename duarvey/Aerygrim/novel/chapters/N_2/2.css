@@ -126,6 +126,11 @@ justify-items: center;
   line-height: 1.6;
 }
 
+.chapter-break {
+  display: block;
+  text-align: center;
+}
+
 .bgphoto {
   height: 100%;
   width: 100%;
