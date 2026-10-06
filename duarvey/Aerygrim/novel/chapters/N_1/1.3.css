@@ -7,6 +7,8 @@
   --background-color: #212121;
   --accent-color: #647b17;
   --text-color: #dcdcdc;
+  --panel-color: rgba(0, 0, 0, 0.718);
+
   --font-family: 'Open Sans', sans-serif;
 }
 * {
@@ -138,7 +140,30 @@ justify-items: center;
   opacity: 0.3;
 }
   
+.archer {
+  padding: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+height: 100px;
+width: 400px;
+background-color: var(--panel-color);
+border: 2px solid var(--line-color);
+align-items: center;
+justify-self: center;
+}
 
+.input-box {
+  height: 50px;  
+  width: 100%;
+  background-color: var(--text-color);
+}
+
+.archer:hover {
+  background-color: var(--panel-color);
+
+
+}
 
 
 @media (max-width: 800px) {

@@ -260,6 +260,8 @@ main {
   align-items: center;
   gap: 1em;
   padding: 4em;
+    background-color: var(--panel-color);
+
 }
 h2 {
   width: 90%;

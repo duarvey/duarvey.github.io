@@ -112,9 +112,21 @@ body {
 }
 .content {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
     white-space: pre-line;
+    gap: 3em;
 }
+/* this is where I put my thumbnail */
+  .blog-photo {
+  align-self: center;
+    height: 400px;
+    width: 700px;
+    background-image: url(/images/blog/Screenshot\ 2026-10-06\ 143444.png);
+  background-size: cover;
+  background-position: center;  
+    border: 3px solid var(--hover-color);
+  }
 
 .content p {
     width: 900px;

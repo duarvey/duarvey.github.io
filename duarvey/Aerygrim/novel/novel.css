@@ -118,11 +118,8 @@ body {
   font-weight: 600;
   font-size: 1.25em;
 }
-#sidebar ul li.active a{
+#sidebar .sub-menu li.active > a {
   color: var(--accent-color);
-  svg {
-    fill: var(--accent-color);
-  }
 }
 #sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
   border-radius: .5em;
@@ -183,6 +180,13 @@ cursor: pointer;
 } 
 
 /* Aerygrim active state when submenu open */
+#sidebar > .navbar > ul > li.aerygrim-menu.active > .dropdown-btn,
+#sidebar > .navbar > ul > li.aerygrim-menu.active > .dropdown-btn span {
+  color: var(--accent-color);
+}
+#sidebar > .navbar > ul > li.aerygrim-menu.active > .dropdown-btn svg {
+  fill: var(--accent-color);
+}
 #sidebar > .navbar > ul > li.aerygrim-menu > .dropdown-btn.rotate,
 #sidebar > .navbar > ul > li.aerygrim-menu > .dropdown-btn.rotate span.aerygrim {
   color: var(--accent-color);

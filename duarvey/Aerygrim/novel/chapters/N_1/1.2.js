@@ -18,7 +18,7 @@ $('.font-size .minus').on('click', () => {
 
 $('.pad-size .add').on('click', () => {
     const currentpadSize = parseFloat(chapterText.css('width'));
-    const largerpadSize = Math.min(currentpadSize + 10, 1900);
+    const largerpadSize = Math.min(currentpadSize + 10, 1400);
 
     chapterText.css('width', largerpadSize + 'px');
 });
