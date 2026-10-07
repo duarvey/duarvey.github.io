@@ -7,7 +7,9 @@
   --accent-color: #647b17;
   --text-color: #dcdcdc;
   --panel-color: rgba(0, 0, 0, 0.718);
+  --active-color: rgba(205, 204, 204, 0.718);
   --font-family: 'Open Sans', sans-serif;
+  
 }
 * {
   margin: 0;
@@ -283,8 +285,26 @@ main {
   align-items: center;
   text-align: center;
   width: 100%;
-  background-color: #0d6469;
+  border: 2px solid var(--line-color);
+  font-size: 20px;
+  font-weight: 300;
 }
+
+.section1 ul li:hover {
+  background-color: var(--active-color);
+}
+
+.section1 ul li a,
+.section1 ul li a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section1 ul li.active {
+  background-color: var(--active-color);
+  color: var(--background-color);
+}
+
 
 .divider {
   flex: 0 0 4px;
@@ -300,7 +320,91 @@ main {
   height: 100vh;
   position: relative;
   align-items: center;
-background-color: var(--panel-color); 
-  
+  justify-content: center;
+
+background-color: var(--panel-color);
+  }
+.galery{
+  display: flex;
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+
 }
+.section2 .galery ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+}
+
+
+.section2 .galery ul li a {
+  text-decoration: none;
+}
+
+/* Image upload */
+
+.section2 .galery .one {
+    background-image: url(/images/whimsical\ journey\ of\ the\ spacemage.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
+
+.section2 .galery .two {
+    background-image: url(/images/general/longbranch\ poster.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
+
+.section2 .galery .three {
+    background-image: url(/images/general/Illustration2\ for\ new\ media_duarvey.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
+
+.section2 .galery .four {
+    background-image: url(/images/general/Illustration\ for\ newmedia_duarvey.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
+
+
+.section2 .galery .view {
+  position: fixed;
+  inset: 10vh 10vw;
+  z-index: 1002;
+  width: 80vw;
+  height: 80vh;
+  background-size: contain;
+  background-color: var(--panel-color);
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+
+}
+
+
+
 

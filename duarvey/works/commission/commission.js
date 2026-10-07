@@ -71,6 +71,6 @@ window.addEventListener('beforeunload', saveSidebarState);
 
 /* content */
 
-$('#switch').on('click', function(){
-    $('.profilebox').toggleClass('highlighted');
+$('.galery .one, .galery .two').on('click', function(){
+    $(this).toggleClass('view');
 });
