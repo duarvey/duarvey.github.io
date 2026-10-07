@@ -6,6 +6,7 @@
   --background-color: #1a1a1a;
   --accent-color: #647b17;
   --text-color: #dcdcdc;
+  --panel-color: rgba(0, 0, 0, 0.718);
   --font-family: 'Open Sans', sans-serif;
 }
 * {
@@ -40,8 +41,7 @@ body {
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
-   background-color: var(--background-color);
-  border-right: 1px solid var(--line-color);
+   background-color: var(--panel-color);
 
 }
 
@@ -54,9 +54,8 @@ body {
   height: 100vh;
   width: 250px;
   padding: 0;
-  background-color: var(--background-color);
-  border-right: 1px solid var(--line-color);
-
+  background-color: var(--panel-color);
+  
   position: sticky;
   top: 0;
   align-self: start;
@@ -77,7 +76,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 12px;
+    width: 50px;
     height: 100vh;
   }
 
