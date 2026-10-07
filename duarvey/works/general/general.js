@@ -71,6 +71,6 @@ window.addEventListener('beforeunload', saveSidebarState);
 
 /* content */
 
-$('.galery .one, .galery .two, .galery .three, .galery .four').on('click', function(){
+$('.galery .one, .galery .two, .galery .three, .galery .four, .galery .five, .galery .six').on('click', function(){
     $(this).toggleClass('view');
 });

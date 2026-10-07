@@ -390,7 +390,27 @@ background-color: var(--panel-color);
   cursor: pointer;
 }
 
+.section2 .galery .five {
+    background-image: url(/images/emul.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
 
+.section2 .galery .six {
+    background-image: url(/images/general/The\ late\ christmas\ courier.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    height: 200px;
+  width: 330px;
+  border: 0;
+  cursor: pointer;
+}
 .section2 .galery .view {
   position: fixed;
   inset: 10vh 10vw;
