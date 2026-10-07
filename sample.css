@@ -1,0 +1,30 @@
+.panel-viewport {
+  overflow: hidden;
+}
+
+.panel-track {
+  display: flex;
+  width: 200%;
+  transition: transform 500ms ease;
+}
+
+.aboutme {
+      box-sizing: border-box;
+  flex: 0 0 50%;
+  height: 300px;
+  width: 500px;
+  background-color: rgb(184, 119, 14);
+
+}
+
+.stats {
+  box-sizing: border-box;
+  flex: 0 0 50%;
+  height: 300px;
+  width: 500px;
+  background-color: aqua;
+}
+
+.panel-track.show-stats {
+  transform: translateX(-50%);
+}

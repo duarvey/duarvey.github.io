@@ -299,7 +299,7 @@ main {
   text-align: left;
   gap: .5em;
   padding: 0;
-  border: 3px solid var(--line-color); 
+  background-color: var(--panel-color);
   width: 500px;
   height: 600px;
 }

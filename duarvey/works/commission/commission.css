@@ -295,6 +295,7 @@ main {
 }
 
 
+
 .divider {
   flex: 0 0 4px;
   background-color: var(--line-color);
@@ -309,7 +310,35 @@ main {
   height: 100vh;
   position: relative;
   align-items: center;
-background-color: var(--panel-color); 
-  
+  justify-content: center;
+
+background-color: var(--panel-color);
+  }
+.galery{
+  display: flex;
+  width: 90%;
+  height: 90%;
+  background-color: #696969;
+  align-items: center;
+  justify-content: center;
+
 }
+.section2 .galery ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.section2 .galery ul li {
+  height: 200px;
+  width: 400px;
+  background-color: #75e688;
+}
+
+.section2 .galery ul li a {
+  text-decoration: none;
+}
+
+
+
+
 

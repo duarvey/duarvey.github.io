@@ -286,15 +286,6 @@ main {
   background-color: #0d6469;
 }
 
-.section1 ul li:hover {
-  background-color: #ffffff4f;
-}
-
-.section1 ul li a{
-  text-decoration: none;
-}
-
-
 .divider {
   flex: 0 0 4px;
   background-color: var(--line-color);
