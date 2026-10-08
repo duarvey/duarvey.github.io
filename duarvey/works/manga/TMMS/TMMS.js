@@ -70,7 +70,19 @@ window.addEventListener('beforeunload', saveSidebarState);
 
 
 /* content */
+const chapterList = $('.content ul');
 
-$('#switch').on('click', function(){
-    $('.profilebox').toggleClass('highlighted');
+$('.gap-size .add').on('click', function() {
+    const currentGap = parseFloat(chapterList.css('row-gap')) || 0;
+    const largerGap = Math.min(currentGap + 10, 200);
+
+    chapterList.css('row-gap', largerGap + 'px');
 });
+
+$('.gap-size .minus').on('click', function() {
+    const currentGap = parseFloat(chapterList.css('row-gap')) || 0;
+    const smallerGap = Math.max(currentGap - 10, 0);
+
+    chapterList.css('row-gap', smallerGap + 'px');
+});
+
