@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
+  --navbar-color: rgb(13, 13, 13);
   --line-color: #696969;
   --hover-color: #75e688;
-  --background-color: #1a1a1a;
+  --background-color: #212121;
   --accent-color: #647b17;
   --text-color: #dcdcdc;
   --panel-color: rgba(0, 0, 0, 0.718);
   --font-family: 'Open Sans', sans-serif;
-
 }
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,14 +21,15 @@ html {
   line-height: 1.5rem;
 }
 body {
-  min-height: 100vh;
-  width: 100%;
+    min-height: 100vh;
+    width: 100%;
   background-color: var(--background-color);
   color: var(--text-color); 
   display: grid;
-  grid-template-columns: auto 1fr;
-}
+  grid-template-columns: 1fr;
 
+
+  /* navigation here */
 #toggle-btn{
   rotate: 180deg;}
 
@@ -212,201 +214,164 @@ cursor: pointer;
   fill: var(--accent-color);
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("/images/whimsical\ journey\ of\ the\ spacemage.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+
+/* Contents starts here */
+}
+.hero{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.header{
+  box-sizing: border-box;
+    padding: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
-.hero {
+.divider{
+    display: block;
+    background-color: var(--line-color);
+    height: 5px;
+    width: 100%;
+}
+
+.ribbon {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr) 200px;
-  height: 100vh;
-  width: 80%;
-  margin: 0;
-  gap: 10em;
-  box-sizing: border-box;
-  
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+
+
+.nav {
+  display: flex;
+   justify-self: center;
   gap: 2em;
-}
-.section1,
-.section2,
-.section3 {
-  box-sizing: border-box;
+  height: 50px;
 }
 
-/* this is where I add the contents of my blog */
-.section2 {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-   height: 100vh;
-   align-items: center  ;
-  width: auto;
-  min-width: 0;
-  gap: 1em;
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  padding: 4em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("/images/anime/948045.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-h2 {
-  width: 90%;
-  text-align: center;
-}
-.section2 ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
- gap: 15px;
-  
-
-}
-
-.section2 ul li {
-  display: flex;
-  gap: 2em;
-  font-weight: 100;
-   font-size: 15px;
-  background-color: var(--panel-color);
-
-}
-.section2 a,
-.section2 a:visited {
-  color: var(--accent-color);
-  text-decoration: none;
-   
-}
-.section2 ul li:hover {
-  color: var(--accent-color)
-}
-
-
-.divider {
-  text-align: center;
-  flex-shrink: 0;
-  font-size: 20px;
+.nav .next-chapter {
   display: block;
-  height: 30px;
-  width: 100%;
-  background-color: rgba(171, 171, 171, 0.496);
-}
+    color: var(--accent-color);
 
-.section-title button {
-    background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  font-size: 18px;
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  width: 100%;
-  gap: 4em;
   
 }
 
-.content ul li{
-display: flex;
-height: 80px;
-width: 100%;
-align-content: start  ;
+.next-chapter img {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
-.content ul li img{
-height: 80px;
-width: 160px;
-object-fit: contain;
-left: 0
-
-}
-
-.details{
+.pad-size {
+  gap: 1em;
   display: flex;
+  position: relative;
+  justify-self: start;
+  justify-content: center;
+  list-style: none;
+
+}
+.font-size{
+  gap: 1em;
+  display: flex;
+  position: relative;
+  justify-self: end;
+  justify-content: center;
+  list-style: none;
+}
+.add {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.minus {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    white-space: pre-line;
+    align-items: center;
+    gap: 5em;
+}
+
+  .blog-photo img{
+  align-self: center;
+    height: 400px;
+    width: 700px;
+object-fit: contain;
+    border: 3px solid var(--line-color);
+  }
+
+
+.content p {
+    width: 900px;
+justify-items: center;
+   font-size: 24px;
+    font-weight: 200;
+    text-align: justify;
+  margin: 0 0 1.5em;
+  line-height: 1.6;
+}
+
+.chapter-break {
+  display: block;
+  text-align: center;
+}
+
+.bgphoto {
   height: 100%;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-
-
-}
-
-.content ul li h3{
-  justify-content: center;
-}
-
-.content-work {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 400px;
-  width: 100%;
-  gap: .9em;
-
-}
-
-.section-title {
-align-self: center;
-justify-self: center;
-font-size: 25px;
-
-}
-
-
-
-.content-life {
-  display: none;
-  flex-direction: column;
- position: relative;
-  height: 400px;
-  width: 100%;
-  gap: .9em;
-}
-
-
-/* Reminder: this where I add some decoration */
-
-.section1 {
-  height: 100vh;
-  width: 200px;
-  background-image: url(/images/anime/833058.jpg);
-    background-position: center;
+  padding: 0%;
+  background-image: url(../../../../../../images/62181569_p0.png);
   background-size: cover;
   background-repeat: no-repeat;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.3;
 }
+  
 
 
-.section3 {
-  height: 100vh;
-  width: 200px;
-  justify-self: end;
-   background-image: url(/images/anime/948045.jpg);
-    background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-
-/*mobile format*/
 
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
-  }}
+  }
+
+  main {
+    padding-bottom: 60px; /* leave space for fixed bottom navbar (60px) */
+    width: 100vw;
+  }
+
+  .hero{
+    width: auto;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+.content p{
+  padding: 2em;
+    width: auto;
+    text-wrap: auto;
+}
+
+}
