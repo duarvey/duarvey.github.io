@@ -338,6 +338,7 @@ object-fit: cover;
   width: 150px;
   border: 2px solid var(--line-color);
   cursor: pointer;
+  transition: width 150ms ease-in, height 150ms ease-in;
 
 }
 .section2 .galery span{
