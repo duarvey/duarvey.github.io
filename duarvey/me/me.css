@@ -406,7 +406,6 @@ align-content: center;
  font-weight: 600;
  height: auto;
  width: 100px;
- border: 1px solid var(--hover-color);
 }
 
 .ribbon ul li:hover{
