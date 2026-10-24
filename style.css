@@ -554,6 +554,9 @@ background-color: var(--accent-color);}
   transform: translateY(100%);
   }
 
+
+/* content starts here */
+
   .hero {
   min-height: calc(100svh - 60px); /* Account for the fixed bottom sidebar */
   height: auto;
