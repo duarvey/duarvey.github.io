@@ -464,9 +464,7 @@ background-color: var(--accent-color);}
   body {
     grid-template-columns: 1fr;
   }
-  main {
-    padding: 2em 1em 60px 1em;
-  }
+
   .hero, .knight {
     text-wrap: auto;
     border: none;
