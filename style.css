@@ -311,7 +311,6 @@ color: var(--text-color);
   height: auto;
   align-content: center;
   justify-items: center;
-border: solid red;
 }
 
 .SectionA {
@@ -406,7 +405,6 @@ align-items: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: solid red;
 
 }
 
