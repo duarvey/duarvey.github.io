@@ -21,11 +21,12 @@ html {
 }
 body {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: var(--background-color);
   color: var(--text-color); 
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 #toggle-btn{
@@ -66,10 +67,6 @@ body {
 
 
 @media (min-width: 801px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
   #sidebar-trigger {
     display: block;
     position: fixed;
@@ -210,17 +207,20 @@ cursor: pointer;
   fill: var(--accent-color);
 }
 
+
 main {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 0;
+  gap: 1em;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   gap: 10em;
   box-sizing: border-box;
@@ -281,82 +281,111 @@ color: var(--text-color);
 
 }
 
-.OP {
-  padding: 1em; 
-  font-size: 2.5em;
-  position: relative;
-
-}
 .saint {
-  position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: 800px;
   padding: 2em;
-   box-sizing: border-box;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("images/whimsical\ journey\ of\ the\ spacemage.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  border: solid red;
+  align-content: center;
+  justify-items: center;
+
 }
 
-.stborder {
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 10px;
-  background-color: var(--line-color);
-}
-
-
-.Stcontent {
+.SectionA {
   display: flex;
-  width: 80%;
-  padding: 2em; 
-  font-size: 2em;
-  justify-self: center;
-  align-items: flex-start;
+  flex-direction: column;
+  height: 600px;
+  width: 400px;
+  border: solid yellow;
+  gap: 2em;
+ box-sizing: border-box;
 }
 
-.firstblock {
+.SectionA1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.categories {
+  display: flex;
+    min-height: 0;
+  height: auto;
+  flex: 1;
+  width: 100%;
   list-style: none;
-  width: 100%;
+  gap: 2em;
+   overflow-x: scroll;
+   scrollbar-width: thin;
+   margin: 0;
+  padding: 0;
+   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.categories li{
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+flex: 0 0 100%;
+height: 100%;
+width: 400px;
+border: solid blue;
+justify-content: center;
+align-items: center;
+gap: 1em;
+text-align: center;
+ scroll-snap-align: start;
 }
 
+.categories li h1{
+margin-top: 0;
+
+}
+
+
+.status {
+  padding: 1em;
+  text-align: center;
+}
 .progress {
-  display: flex;
-  padding: 0; 
-  position: relative;
-  font-size: 1.5em;
-  align-self: right;
-  margin-left: auto;
-}
-.website {
-  display: flex;
-  font-size: 2em;
-}
-.storytitle {
-  display: flex;
-  font-size: 2em;
+  align-items: center;
+  padding: 1em;
+  font-size: 30px;
+  font-weight: 1000;
 }
 
-.description {
-  padding: 2em; 
-  width: 50%;
-  font-size: .4em;
-  text-align: left;
+.statusbox {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-.knight {
-  height: 1000px;
+/* Background img status */
+.novel{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url(/images/whimsical\ journey\ of\ the\ spacemage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.manga {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url(/images/index_status/C1_p.35.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.knight { 
+  height: 900px;
   padding: 2em;
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: solid blue;
 }
 
 .ktheader {
@@ -410,7 +439,6 @@ text-align: center;
 }
 
 .socials {
-  padding: 1em;
   display: flex;
   justify-content: center;
   gap: 2em;
@@ -436,11 +464,9 @@ background-color: var(--accent-color);}
   body {
     grid-template-columns: 1fr;
   }
-
   main {
-    padding-bottom: 60px; /* leave space for fixed bottom navbar (60px) */
+    padding: 2em 1em 60px 1em;
   }
-
   .hero, .knight {
     text-wrap: auto;
     border: none;
@@ -456,10 +482,11 @@ background-color: var(--accent-color);}
     position: fixed;
     top: unset;
     bottom: 0;
-    
+    transition: transform 300ms ease-in-out;
 
-
-    .navbar { ul li span, ul li:first-child, .dropdown-btn svg:last-child {
+    .navbar { 
+      
+    ul li span, ul li:first-child, .dropdown-btn svg:last-child {
     display: none;}
     
    
@@ -491,8 +518,8 @@ background-color: var(--accent-color);}
       box-sizing: border-box;
       height: 60px;
       width: 100%;
-      background-color: var(--background-color);
-      border-top: 1px solid var(--line-color);
+      background-color: var(--panel-color);
+      border-top: 1px solid var(--accent-color);
       display: flex;
       justify-content: center;
 
@@ -508,7 +535,22 @@ background-color: var(--accent-color);}
 
     }
   }
-}
+  }
 
+  #sidebar.mobile-hidden {
+  transform: translateY(100%);
+  }
 
+  .hero {
+    height: 700px;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--line-color);
+  }
+  .knight {
+    height: 500px;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--line-color);
+  }
 }
