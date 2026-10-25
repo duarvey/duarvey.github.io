@@ -242,14 +242,14 @@ main {
   gap: 2em;
  
 }
-.coverphoto {
+.section1 {
   aspect-ratio: 4/6;
   width: 500px;
   height: 700px;
   position: relative;
 
 }
-.coverphoto img {
+.section1 img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -258,7 +258,7 @@ main {
   z-index: 0;
 }
 
-.section1 {
+.section1a {
   position: relative;
   width: 500px;
   height: 700px;
@@ -273,7 +273,7 @@ main {
   box-sizing: border-box;
 }
 
-.section1:hover {
+.section1a:hover {
   background-color: rgba(0, 0, 0, 0.629); 
    border-color: var(--accent-color);
   opacity: 1;
@@ -435,19 +435,22 @@ font-size: 20px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   justify-content: flex-start;
-  gap: 1em;
-  padding-right: max(0px, calc(100% - 500px));
+  gap: 8em;
+  padding-inline: max(0px, calc((100vw - min(500px, 90vw)) / 2));
   scrollbar-width: none;
 }
-.section1 {
+
+.hero > .section1,
+.hero > .section2 {
+  flex: 0 0 min(500px, 90vw);
+  min-width: 0;
   height: 100%;
-justify-content: center;}
+  scroll-snap-align: center;
+}
 
-.coverphoto, .section2 {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
+.hero .section1a {
+  width: 100%;
   height: 100%;
-
-
+  justify-content: center;
 }
 }
