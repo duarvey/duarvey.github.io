@@ -1,5 +1,7 @@
 const toggleButton = $('#toggle-btn');
 const sidebar = $('#sidebar');
+const mobileTopNav = $('.hero > nav.section1');
+const mobileTopDivider = mobileTopNav.next('.divider');
 
 function toggleSidebar() {
     sidebar.toggleClass('open');
@@ -47,12 +49,16 @@ function handleScroll() {
 
     if (!mobileNav.matches) {
         sidebar.removeClass('mobile-hidden');
+        mobileTopNav.removeClass('mobile-hidden');
+        mobileTopDivider.removeClass('mobile-hidden');
         previousScrollY = currentScrollY;
         return;
     }
 
     if (currentScrollY <= 0) {
         sidebar.removeClass('mobile-hidden');
+        mobileTopNav.removeClass('mobile-hidden');
+        mobileTopDivider.removeClass('mobile-hidden');
         previousScrollY = currentScrollY;
         return;
     }
@@ -67,14 +73,20 @@ function handleScroll() {
     // Keep the navigation visible while its submenu is open.
     if (sidebar.find('.sub-menu.show').length) {
         sidebar.removeClass('mobile-hidden');
+        mobileTopNav.removeClass('mobile-hidden');
+        mobileTopDivider.removeClass('mobile-hidden');
         previousScrollY = currentScrollY;
         return;
     }
 
     if (scrollDifference > 0) {
         sidebar.addClass('mobile-hidden'); // Scrolling down
+        mobileTopNav.addClass('mobile-hidden');
+        mobileTopDivider.addClass('mobile-hidden');
     } else {
         sidebar.removeClass('mobile-hidden'); // Scrolling up
+        mobileTopNav.removeClass('mobile-hidden');
+        mobileTopDivider.removeClass('mobile-hidden');
     }
 
     previousScrollY = currentScrollY;

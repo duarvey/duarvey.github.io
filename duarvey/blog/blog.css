@@ -242,6 +242,12 @@ main {
   box-sizing: border-box;
 }
 
+
+
+
+
+
+
 /* this is where I add the contents of my blog */
 .section2 {
   display: flex;
@@ -406,7 +412,156 @@ font-size: 25px;
 
 /*mobile format*/
 
+/*mobile format*/
+
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
-  }}
+    overflow-x: hidden;
+  }
+
+  .hero, .knight {
+    text-wrap: auto;
+    border: none;
+    padding: 0;
+  }
+
+  #sidebar{
+    height: 60px;
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid var(--line-color);
+    padding: 0;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    z-index: 1001;
+    transition: transform 300ms ease-in-out;
+
+    .navbar { 
+      
+    ul li span, ul li:first-child, .dropdown-btn svg:last-child {
+    display: none;}
+    
+   
+    > ul{
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      align-items: center;
+      overflow-x: scroll;
+      justify-content: center;
+    }
+
+    ul li {
+      height: 100%;}
+      
+    
+    ul a, ul .dropdown-btn {
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 0;
+      justify-content: center;
+    }
+    ul li .sub-menu.show {
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      box-sizing: border-box;
+      height: 60px;
+      width: 100%;
+      background-color: var(--panel-color);
+      border-top: 1px solid var(--accent-color);
+      display: flex;
+      justify-content: center;
+
+      >div {overflow-x: auto}
+
+      li{
+        display: inline-flex;
+      }
+      a{box-sizing: border-box;
+      padding: 1em;
+    width: auto;
+  justify-content: center;}
+
+    }
+  }
+  }
+
+  #sidebar.mobile-hidden {
+  transform: translateY(100%);
+  }
+
+/* content start here */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+
+.section1 ,  .section3 {
+  display: none;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  min-width: 0;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.header{
+  text-align: center;
+  font-size: 15px;
+}
+.content li{
+  display: flex;
+  width: 100%;
+}
+
+.content,
+.content-work,
+.content ul,
+.content ul li,
+.content .details {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+}
+
+.content-work,
+.content ul {
+  width: 100%;
+}
+
+.content ul li {
+  gap: 0.75em;
+  padding: 0 1em;
+}
+
+.content ul li img {
+  box-sizing: border-box;
+  flex: 0 1 clamp(80px, 30vw, 160px);
+  width: clamp(80px, 30vw, 160px);
+  max-width: 100%;
+  min-width: 0;
+  height: 80px;
+}
+
+.content .details {
+  flex: 1;
+}
+
+}
