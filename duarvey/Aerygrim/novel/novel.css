@@ -226,6 +226,7 @@ main {
 }
 
 .hero {
+  box-sizing: border-box;
   display: flex;
   height: 100vh;
   width: 100%;
@@ -243,10 +244,9 @@ main {
 }
 .coverphoto {
   aspect-ratio: 4/6;
-  width: 400px;
-  height: 600px;
+  width: 500px;
+  height: 700px;
   position: relative;
-  overflow: hidden;
 
 }
 .coverphoto img {
@@ -260,8 +260,8 @@ main {
 
 .section1 {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -270,6 +270,7 @@ main {
   z-index: 1;
   opacity: 0;
   gap: 1em;
+  box-sizing: border-box;
 }
 
 .section1:hover {
@@ -286,7 +287,7 @@ main {
   margin: 0;
 }
 .paragraph {
-
+font-size: 20px;
   width: 90%;
   border: 2px solid var(--line-color);
   text-align: center;
@@ -304,7 +305,7 @@ main {
   padding: 0;
   background-color: var(--panel-color);
   width: 500px;
-  height: 600px;
+  height: 700px;
 }
 
 .chapters {
@@ -316,11 +317,10 @@ main {
   display: flex;
   flex-direction: column;
   list-style: none;
-  font-size: 25px;
-  gap: 1em;
-  width: 80%;
+  font-size: 30px;
+  gap: 1rem;
+  width: 90%;
   height: 72%;
- border: 2px solid var(--line-color);
   padding: 0;
   margin: 0; 
   overflow-y: auto;
@@ -343,4 +343,110 @@ main {
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
-  }}
+  }
+
+
+  .hero, .knight {
+    text-wrap: auto;
+    border: none;
+    padding: 0;
+  }
+
+  #sidebar{
+    height: 60px;
+    width: 100%;
+    border-right: none;
+    border-top: 1px solid var(--line-color);
+    padding: 0;
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    transition: transform 300ms ease-in-out;
+    z-index: 2;
+
+    .navbar { 
+      
+    ul li span, ul li:first-child, .dropdown-btn svg:last-child {
+    display: none;}
+    
+   
+    > ul{
+      padding: 0;
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      align-items: center;
+      overflow-x: scroll;
+      justify-content: center;
+    }
+
+    ul li {
+      height: 100%;}
+      
+    
+    ul a, ul .dropdown-btn {
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 0;
+      justify-content: center;
+    }
+    ul li .sub-menu.show {
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      box-sizing: border-box;
+      height: 60px;
+      width: 100%;
+      background-color: var(--panel-color);
+      border-top: 1px solid var(--accent-color);
+      display: flex;
+      justify-content: center;
+
+      >div {overflow-x: auto}
+
+      li{
+        display: inline-flex;
+      }
+      a{box-sizing: border-box;
+      padding: 1em;
+    width: auto;
+  justify-content: center;}
+
+    }
+  }
+  }
+
+  #sidebar.mobile-hidden {
+  transform: translateY(100%);
+  }
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-content: flex-start;
+  gap: 0;
+}
+.hero > .coverphoto,
+.hero > .section2 {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+.hero > .coverphoto {
+  height: 100%;
+  aspect-ratio: auto;
+}
+.hero .section1,
+.hero > .section2 {
+  height: 100%;
+}
+}
