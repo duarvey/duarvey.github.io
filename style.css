@@ -306,27 +306,60 @@ color: var(--text-color);
 
 
 .saint {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  align-content: center;
-  justify-items: center;
+  justify-content: center;
+  gap: 2em;
+  align-items: center;
 }
+
+.statusheader {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1em;
+}
+
 
 .SectionA {
   display: flex;
-  flex-direction: column;
-  height: 600px;
-  width: 400px;
   gap: 2em;
  box-sizing: border-box;
+  justify-content: center;
 }
 
-.SectionA1 {
+.SectionA > li{
+position: relative;
+ display: flex;
+   height: 600px;
+  width: 400px;
+  flex-direction: column;
+   gap: 2em;
+ box-sizing: border-box;
+ justify-content: flex-start;
+ align-items: center;
+   padding: 0;
+
+}
+
+.titleCard {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  min-height: 0;
+  height: 80px;
+  width: 90%;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+   box-sizing: border-box;
+}
+
+.statusBorder {
+  height: 4px;
+  width: 100%;
+  background-color: var(--line-color);
 }
 
 .categories {
@@ -356,18 +389,29 @@ align-items: center;
 gap: 1em;
 text-align: center;
  scroll-snap-align: start;
-}
-
-.categories li h1{
-margin-top: 0;
-
+ z-index: 1;
 }
 
 
 .status {
-  padding: 1em;
   text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
 }
+.statusDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 80%;    /* less than 100% so horizontal centering is visible */
+  border: solid var(--line-color);
+  margin-block: auto; /* centers it vertically in the remaining space */
+
+}
+
+
 .progress {
   align-items: center;
   padding: 1em;
@@ -379,6 +423,33 @@ margin-top: 0;
 display: flex;
 flex-direction: column;
 align-items: center;
+}
+
+.SectionA3 {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url(/images/artworks/the\ woman\ and\ centepid\ \(downscaled\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cardCTA {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+  gap: 1em;
+  align-items: center;
+  padding: 1em;
+}
+.cardCTA > ul{
+  gap: 30px;
+  display: flex;
+  list-style: none;
+}
+.cardCTA > span{
+font-size: 18px;
+}
+.cardCTA svg{
+  fill: var(--icon-color);
 }
 
 /* Background img status */
@@ -394,6 +465,24 @@ align-items: center;
   background-size: cover;
 }
 
+
+/* mage */
+
+.mage {
+  display: flex;
+  height: 400px;;
+  width: 100%;
+   border: solid red;
+  justify-content: center;
+  align-items: center;
+}
+
+.magesection1 {
+  height: 400px;
+  width: 600px;
+     border: solid rgb(11, 38, 85);
+
+}
 
 
 
@@ -421,11 +510,9 @@ text-align: center;
 
 .ktnotes {
   font-size: 1em;
-  padding: 2em;
   text-align: center;
   width:80%;
   height: auto;
-  border: 3px solid var(--line-color);
   white-space: pre-line;
 
 
@@ -480,6 +567,10 @@ background-color: var(--accent-color);}
     grid-template-columns: 1fr;
   }
 
+  main {
+    overflow-x: hidden;
+  }
+
   .hero, .knight {
     text-wrap: auto;
     border: none;
@@ -496,6 +587,7 @@ background-color: var(--accent-color);}
     top: unset;
     bottom: 0;
     transition: transform 300ms ease-in-out;
+    z-index: 2;
 
     .navbar { 
       
@@ -575,6 +667,14 @@ background-color: var(--accent-color);}
     height: auto;
   }
   
+  .saint > ul {
+    display: flex;
+    flex-direction: column;
+  }
+    .saint > ul > li{
+          width: 100svw;
+    }
+
   .knight {
     height: auto;
     width: 100%;
