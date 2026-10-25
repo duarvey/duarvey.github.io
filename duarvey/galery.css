@@ -558,4 +558,25 @@ background-color: var(--panel-color);
 .section2 .galery li:nth-child(2):hover {
   transform-origin: right center;
 }
+
+.section2 .galery .details {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow-y: auto;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+}
+
+.section2 .galery .details h2,
+.section2 .galery .details p {
+  overflow-wrap: anywhere;
+}
+
+.section2 .galery .details a svg {
+  width: 32px;
+  height: 32px;
+}
 }
