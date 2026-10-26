@@ -215,7 +215,7 @@ cursor: pointer;
 
 body {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
   background-color: var(--background-color);
   color: var(--text-color); 
   display: grid;
@@ -233,6 +233,11 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url(/images/whimsical\ journey\ of\ the\ spacemage.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 .header{
   box-sizing: border-box;
@@ -311,8 +316,11 @@ body {
 }
 .content {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
     white-space: pre-line;
+  align-items: center;
+  gap: 4em;
 }
 
 .content p {
@@ -330,19 +338,17 @@ justify-items: center;
   text-align: center;
 }
 
-.bgphoto {
-  height: 100%;
-  width: 100%;
-  padding: 0%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url(../../../../../../images/62181569_p0.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: fixed;
-  z-index: -1;
-  opacity: 0.3;
+.blog-photo {
+  height: 300px;
+  width: 500px;
+  object-fit: contain;
+  position: center;
 }
   
-
+.blog-photo img{
+  height: 100%;
+  width: 100%;
+}
 
 
 @media (max-width: 800px) {
@@ -421,11 +427,12 @@ justify-items: center;
   }
 
 
+/* Mobile format */
 
   main {
     padding-bottom: 60px; /* leave space for fixed bottom navbar (60px) */
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .hero{

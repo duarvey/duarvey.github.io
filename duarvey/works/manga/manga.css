@@ -493,6 +493,7 @@ font-size: 15px;
 
 
  /* Content starts here */
+@media (max-width: 800px) {
 .hero {
   display: flex;
   flex-direction: column;
@@ -601,4 +602,5 @@ font-size: 15px;
 .section2 .galery .details a svg {
   width: 32px;
   height: 32px;
+}
 }
