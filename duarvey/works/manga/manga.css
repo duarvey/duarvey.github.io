@@ -216,7 +216,6 @@ cursor: pointer;
 
 main {
     display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 0;
   background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.763)), url("/images/whimsical\ journey\ of\ the\ spacemage.jpg");
@@ -244,6 +243,7 @@ main {
 
 .section1 {
   display: flex;
+  flex-direction: column;
   flex: 0 0 200px;
   background-color: var(--panel-color);
   height: 100vh;
@@ -601,5 +601,4 @@ font-size: 15px;
 .section2 .galery .details a svg {
   width: 32px;
   height: 32px;
-}
 }
