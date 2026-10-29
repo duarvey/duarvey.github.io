@@ -256,9 +256,39 @@ span.aerygrim {
 height: 700px;
 width: 100%;
   padding: 1em;
-  background-color: var(--line-color)
+  background-color: var(--line-color)}
 
+.description {
+  display: flex;
+flex-direction: column;
 }
+
+.description span{
+  font-size: 17px;
+}
+
+.samgpleimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.samgpleimg li{
+  width: min(100%, 700px);
+}
+.samgpleimg li img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.note span{
+  font-size: 20px;
+}
+
 .knight{
 height: 500px;
 width: 100%;
