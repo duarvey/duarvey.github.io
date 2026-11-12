@@ -335,7 +335,11 @@ justify-items: center;
 
 .chapter-break {
   display: block;
+  width: 100%;
+  margin: 0.5em auto;
   text-align: center;
+  letter-spacing: 0.12em;
+  color: var(--text-color);
 }
 
 .blog-photo {
